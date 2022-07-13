@@ -1,0 +1,20 @@
+<form (ngSubmit)="submit()">
+  <fieldset>
+    <fieldset class="grupo">
+      <div class="campo">
+        <label for="name">name</label>
+        <input type="text" id="name" name="name" style="width: 10em" value="" [(ngModel)]="name">
+      </div>
+      <div class="campo">
+        <label for="password">password</label>
+        <input type="text" id="password" name="password" style="width: 10em" value="" [(ngModel)]="password">
+      </div>
+    </fieldset>
+    <div class="campo">
+      <label for="scopes">scopes</label>
+      <input type="text" id="scopes" name="scopes" style="width: 20em" value="" [(ngModel)]="scopes">
+    </div>
+
+    <button type="submit" name="submit">Enviar</button>
+  </fieldset>
+</form>

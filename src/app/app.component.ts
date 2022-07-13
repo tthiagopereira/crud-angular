@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {TemplateService} from "./template-service/template.service";
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'tatic-app';
+
+  constructor(private service: TemplateService) {}
+
+  save($event: any) {
+    this.service.save($event)
+  }
 }

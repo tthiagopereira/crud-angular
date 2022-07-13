@@ -1,0 +1,25 @@
+<p>template-list works!</p>
+
+<table>
+  <thead>
+  <tr>
+    <td>Nome</td>
+    <td>scopes</td>
+    <td>passowrd</td>
+    <td>Ação</td>
+  </tr>
+  </thead>
+  <tbody>
+  <tr  *ngFor="let item  of list | keys">
+    <td>{{list[item].username}}</td>
+    <td>{{list[item].scopes}}</td>
+    <td>{{list[item].password}}</td>
+    <td>
+      <button (click)="removeList(list[item]._id)">
+        deletar
+      </button>
+
+    </td>
+  </tr>
+  </tbody>
+</table>
